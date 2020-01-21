@@ -16,3 +16,19 @@ pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver 0.0.0.0:5000
 ```
+
+
+## API's
+Following API to get the connections belonging to a person 
+
+Relation type choices: 
+```
+grand_parent
+parent
+children
+sibling
+cousin
+spouse
+```
+
+```GET: /api/v1/people/<people_id>/get_connection/?relation_type=<relation_type>```
